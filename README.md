@@ -21,6 +21,9 @@ O TaskMaster é uma aplicação web que permite você criar, gerenciar e conclui
 - CSS3
 - JavaScript
 
+## 🔗 LinkedIn:
+[Visite meu LinkedIn: Sara Souza]([https://github.com](https://www.linkedin.com/in/souza-sara/))
+
 ## 👩🏻‍💻 Interface do Projeto:
 <div align="center">
 
