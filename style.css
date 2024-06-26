@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(#EAEAEA, #E9E4F0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+body.dark, html.dark {
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(#414345, #232526);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.bloco-principal {
+    background-color: #f0f0f0;
+    position: relative;
+    width: 70%;
+    max-width: 500px;
+    padding: 20px 0 30px;
+    margin: 137px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30 px rgba(0, 0, 0, 0.1);
+}
+
+.bloco-principal.dark {
+    background-color: #444444;
+}
+
+.bloco-principal header {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+    background-image: linear-gradient(to bottom, #292E49,#536976);
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bloco-principal.dark header {
+    background-image: linear-gradient(to bottom, #CC95C0 ,#DBD4B4);
+}
+
+.modo-escuro-claro {
+    text-align: right;
+    margin-right: 60px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #292E49, #292E49, #536976);
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modo-escuro-claro.dark {
+    background: linear-gradient(to bottom, #CC95C0 ,#DBD4B4);
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.trilho {
+    position: absolute;
+    right: 2.5%;
+    top: 20px;
+    width: 40px;
+    height: 20px;
+    background-color: #bdbdbd;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.trilho.dark {
+    background-color: #999;
+}
+
+.trilho .indicador {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to right, #292E49,#536976);
+    border-radius: 50%;
+    box-shadow: 2px 0 2px #999;
+    transform: scale(.9);
+    cursor: pointer;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark .indicador {
+    left: 20px;
+    background-image: linear-gradient(to right, #CC95C0 ,#DBD4B4);
+    box-shadow: -2px 0px 2px #999999;
+    transition: .5s;
+}
+
+.entrada-tarefa {
+    display: flex;
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.entrada-tarefa figure {
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -50%);
+    opacity: 0.3;
+}
+
+.entrada-tarefa input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #292E49;
+    padding: 0 20px 0 53px;
+}
+
+.entrada-tarefa input.dark {
+    border: 2px solid #CC95C0;
+    padding: 0 20px 0 53px;
+}
+
+.entrada-tarefa input:focus,
+.entrada-tarefa input:active {
+    padding-left: 52px;
+    border: 2px solid #536976;
+}
+
+.entrada-tarefa input.dark:focus,
+.entrada-tarefa input.dark:active {
+    padding-left: 52px;
+    border: 2px solid #E684AE;
+}
+
+.entrada-tarefa input::placeholder {
+    color: #999;
+}
+
+.botao-adicionar {
+    position: absolute;
+    right: 8%;
+    top: 17.5%;
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(to right, #292E49,#536976);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.botao-adicionar.dark {
+    background: linear-gradient(to right, #CC95C0, #DBD4B4);
+    transition: .2s;
+}
+
+.botao-adicionar:hover {
+    color: #000;
+    background: linear-gradient(to right,#536976, #292E49);;
+}
+
+.botao-adicionar.dark:hover {
+    color: #fff;
+    background: linear-gradient(to right, #DBD4B4, #CC95C0);
+}
+
+.botao-adicionar:active {
+    transform: translateY(-2px);
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.controles.dark {
+    border-bottom: 1px solid #ccc;
+}
+
+.filtros {
+    margin: 20px;
+    font-size: 17px;
+    color: #444;
+    cursor: pointer;
+}
+
+.filtros.dark {
+    color: #ccc;
+}
+
+.filtros span {
+    margin: 0 8px;
+}
+
+ .filtros span.ativo {
+    color: #444;
+    background-image: linear-gradient(to bottom, #536976, #292E49);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+
+ .filtros span.ativo.dark {
+    color: #ccc;
+    background-image: linear-gradient(to bottom, #DBD4B4, #CC95C0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+
+.controles .botao-limpar {
+    margin: 25px;
+    padding: 7px 13px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(to right, #536976, #292E49);
+    transition: .2s;
+}
+
+.controles .botao-limpar.dark {
+    background: linear-gradient(to right, #DBD4B4, #CC95C0);
+    transition: .2s;
+}
+
+.controles .botao-limpar:hover{
+    color: #000;
+    background: linear-gradient(to right, #292E49, #536976);
+}
+
+.controles .botao-limpar.dark:hover{
+    color: #fff;
+    background: linear-gradient(to right, #CC95C0, #DBD4B4);
+}
+
+.controles .botao-limpar:active {
+    transform: translateY(-2px);
+}
+
+.caixa-de-tarefas {
+    margin-right: 5px;
+    padding: 0 10px 10px 25px;
+}
+
+.caixa-de-tarefas .tarefas {
+    display: none;
+    align-items: center;
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #444;
+    color: #444;
+}
+
+.caixa-de-tarefas.dark .tarefas {
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+}
+
+.caixa-de-tarefas .tarefas:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.tarefas span {
+    display: flex;
+    margin-left: 10px;
+}
+
+.tarefas .acoes {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+.tarefas .botao-editar {
+    justify-content: flex-end;
+    margin: 5px;
+    left: 5%;
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(to right, #292E49,#536976);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.tarefas.dark .botao-editar {
+    background: linear-gradient(to right, #CC95C0, #DBD4B4);
+}
+
+.tarefas .botao-editar:hover {
+    color: #000;
+    background: linear-gradient(to right, #536976, #292E49);
+}
+
+.tarefas.dark .botao-editar:hover {
+    color: #fff;
+    background: linear-gradient(to right, #DBD4B4, #CC95C0);
+}
+
+.tarefas .botao-editar:active {
+    transform: translateY(-2px);
+}
+
+.tarefas .botao-excluir {
+    justify-content: flex-end;
+    margin: 5px;
+    left: 5%;
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(to right, #292E49,#536976);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.tarefas.dark .botao-excluir {
+    background: linear-gradient(to right, #CC95C0, #DBD4B4);
+}
+
+.tarefas .botao-excluir:hover {
+    color: #000;
+    background: linear-gradient(to right, #536976, #292E49);
+}
+
+.tarefas.dark .botao-excluir:hover {
+    color: #fff;
+    background: linear-gradient(to right, #DBD4B4, #CC95C0);
+}
+
+.botao-excluir:active {
+    transform: translateY(-2px);
+}
+
+.tarefas .nome-tarefa {
+    position: absolute;
+    margin-bottom: 5px;
+}
+
+.tarefas .status-tarefa {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #666;
+    padding: 0 6px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+#feito {
+    color: #fff;
+    background: #a8e063;
+    opacity: 80%;
+}
+
+#feito.dark {
+    background: #56ab2f;
+}
+
+#fazendo {
+    color: #fff;
+    background: #FDC830;
+    opacity: 80%;
+}
+
+#fazendo.dark {
+    background: #ddae2c;
+}
+
+#a-fazer {
+    color: #fff;
+    background: #ED213A;
+    opacity: 80%;
+}
+
+#a-fazer.dark {
+    background: #d31e33;
+}
+
+.editar-tarefas-modal {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.conteudo-modal {
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    background-color: #f0f0f0;
+    position: relative;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30 px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-modal.dark {
+    border: #000;
+    background-color: #444444;
+}
+
+.conteudo-modal h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+    background-image: linear-gradient(to bottom, #292E49,#536976);
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.conteudo-modal h2.dark {
+    background-image: linear-gradient(to bottom, #CC95C0 ,#DBD4B4);
+    color: #fff;
+}
+
+.conteudo-modal input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #292E49;
+    padding: 0 20px 0 10px;
+}
+
+.conteudo-modal input.dark {
+    border: 2px solid #CC95C0;
+}
+
+.conteudo-modal #tarefa-nome.dark,
+.conteudo-modal #tarefa-status.dark {
+    color: #ccc;
+}	
+
+.conteudo-modal #tarefa-nome-editar:focus,
+.conteudo-modal #tarefa-nome-editar:active {
+    padding: 0 20px 0 10px;
+    border: 2px solid #536976;
+}
+
+.conteudo-modal #tarefa-nome-editar.dark:focus,
+.conteudo-modal #tarefa-nome.dark-editar:active {
+    border: 2px solid #E684AE;
+}
+
+.conteudo-modal #tarefa-status-editar {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    padding: 0 6px;
+    outline: none;
+    border: 2px solid #292E49;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.conteudo-modal #tarefa-status-editar.dark {
+    border: 2px solid #CC95C0;
+}
+
+.conteudo-modal button {
+    margin-top: 20px;
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(to right, #292E49,#536976);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.conteudo-modal button.dark {
+    background: linear-gradient(to right, #CC95C0, #DBD4B4);
+}
+
+.conteudo-modal button:hover {
+    color: #000;
+    background: linear-gradient(to right, #536976, #292E49);
+}
+
+.conteudo-modal button.dark:hover {
+    color: #fff;
+    background: linear-gradient(to right, #DBD4B4, #CC95C0);
+}
+
+.conteudo-modal button:active {
+    transform: translateY(-2px);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

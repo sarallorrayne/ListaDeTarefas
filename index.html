@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/c0e515670e.js" crossorigin="anonymous"></script>
+    <title>Projeto - Lista de Tarefas</title>
+</head>
+<body>
+    <div class="bloco-principal">
+        <h1 class="modo-escuro-claro">Dark Mode
+            <div class="trilho" id="trilho">
+                <div class="indicador"></div>
+            </div>
+        </h1>
+        
+        <header>Lista de Tarefas</header>
+        <div class="entrada-tarefa">
+            <figure><i class="fa-solid fa-bars"></i></figure>
+            <input type="text" placeholder="Insira uma nova tarefa">
+            <button class="botao-adicionar"><i class="fa fa-plus"></i></button>
+        </div>
+        <div class="controles">
+            <div class="filtros">
+                <span id="todos" class="ativo">Todas</span>
+                <span id="afazer">A Fazer</span>
+                <span id="concluido">Concluídas</span>
+            </div>
+            <button class="botao-limpar">Limpar Tarefas</button>
+        </div>
+        <div class="caixa-de-tarefas">
+            <div class="tarefas">
+                <span class="status-tarefa" id="feito">Feito</span>
+                <span class="nome-tarefa">Estudar Programação Web</span>
+                <div class="acoes">
+                    <button class="botao-editar"><i class="fa-solid fa-pen"></i></button>
+                    <button class="botao-excluir"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="tarefas">
+                <span class="nome-tarefa">Fazer Projeto Integrador</span>
+                <span class="status-tarefa" id="fazendo">Fazendo</span>
+                <div class="acoes">
+                    <button class="botao-editar"><i class="fa-solid fa-pen"></i></button>
+                    <button class="botao-excluir"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="tarefas">
+                <span class="nome-tarefa">Estudar para prova</span><br>
+                <span class="status-tarefa" id="a-fazer">A Fazer</span>
+                <div class="acoes">
+                    <button class="botao-editar"><i class="fa-solid fa-pen"></i></button>
+                    <button class="botao-excluir"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="editar-tarefas">
+            <!-- Modal para editar tarefas -->
+            <div class="modal" id="editar-tarefa-modal">
+                <div class="conteudo-modal">
+                    <span class="close">&times;</span>
+                    <h2>Editar Tarefa</h2>
+                    <form>
+                        <label for="tarefa-nome" id="tarefa-nome">Nome:</label>
+                        <input type="text" id="tarefa-nome-editar"/>
+                        <br />
+                        <label for="tarefa-status-editar" id="tarefa-status">Situação:</label>
+                        <select id="tarefa-status-editar">
+                            <option value="a-fazer">A Fazer</option>
+                            <option value="fazendo">Fazendo</option>
+                            <option value="feito">Feito</option>
+                        </select>
+                        <br />
+                        <button id="excluir-tarefa">Excluir Tarefa</button>
+                        <button id="salvar-alteracoes">Salvar Alterações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="darkMode.js"></script>
+
+</body>
+</html>
