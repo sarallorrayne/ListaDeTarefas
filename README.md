@@ -6,7 +6,7 @@ Este é um projeto front-end de lista de tarefas simples criado para ajudar voc�
 
 ## ❔ O que é o projeto?
 
-O TaskMaster é uma aplicação web que permite você criar, gerenciar e concluir tarefas de forma fácil e intuitiva. Com uma interface minimalista e fácil de usar, você pode se concentrar em fazer o que importa: concluir suas tarefas!
+A lista de tarefas é uma aplicação web que permite você criar, gerenciar e concluir tarefas de forma fácil e intuitiva. Com uma interface minimalista e fácil de usar, você pode se concentrar em fazer o que importa: concluir suas tarefas!
 
 ## ✨ Funcionalidades:
 - Crie tarefas novas com facilidade
